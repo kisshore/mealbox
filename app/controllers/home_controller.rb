@@ -37,5 +37,8 @@ class HomeController < ApplicationController
      redirect_to :back
   end
   def reset
+    User.update_all(:meal_of_the_day => nil, :likes => nil, :dislikes => nil, :no_pref => nil)
+    Meal_Box.update_all(:total_count => nil, :available => nil)
+    redirect_to :back
   end
 end
