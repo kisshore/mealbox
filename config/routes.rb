@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
+  get 'dashboard/preference_update'
+
   devise_for :users
  #  get 'home/index'
 
