@@ -8,12 +8,12 @@ class HomeController < ApplicationController
   def randomize_meals
         Meal_Box.all.each do |box|
          box.total_count=rand(1..2)
-         box.available=box.total
+         box.available=box.total_count
          box.save
         end
        
 	User.all.each do |user|
-      	  user.meal_of_day = nil
+      	  user.meal_of_the_day = nil
           user.save
         end
      
