@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
   end
-
+#This action allocates meals based on user prefernces & reduces available count once user allocated with mealbox
   def allocate_meals
        User.all.each do |user|
        if user.meal_of_the_day.nil?
@@ -32,6 +32,7 @@ class HomeController < ApplicationController
      
      redirect_to "/"
   end
+#This action resets all users meal_of_the_day, preferences, mealbox count
   def reset
     User.update_all(:meal_of_the_day => nil, :likes => nil, :dislikes => nil, :no_pref => nil)
     Meal_Box.update_all(:total_count => nil, :available => nil)
