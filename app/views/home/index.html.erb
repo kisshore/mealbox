@@ -50,10 +50,17 @@
           <thead>
             <tr>
                 <th>User login</th>
-                <th>Password</th>
 		<th>Meal of the day</th>
             </tr>
           </thead>
+           <tbody>
+            <%User.all.each do |user|%>
+            <tr>
+              <td><%= user.email%></td>
+              <td><%= user.meal_of_the_day%></td>
+            </tr>
+           <%end %>
+          </tbody>
         </table>
     </div>
   </div>
