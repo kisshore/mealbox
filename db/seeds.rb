@@ -25,3 +25,16 @@
   mealbox_list.each do |name, type|
     Meal_Box.create( name: name, category: type)
   end
+#seeding users list
+users_list = [
+	     ["ernest@grain.com.sg", "changeme"],
+             ["vivek@grain.com.sg", "changeme"],
+             ["sung@grain.com.sg", "changeme"],
+             ["mike@grain.com.sg", "changeme"],
+             ["paul@grain.com.sg", "changeme"],
+             ["nguyen@grain.com.sg", "changeme"]
+]
+  users_list.each do |email, password|
+    User.create(email: email, password: password)
+  end
+
