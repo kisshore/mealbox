@@ -25,4 +25,36 @@
     </div>
    </div>
 </div>
+<br><br>
+<div class="row">
+   <div class="large-6 large-offset-3 columns">
+    <div class="callout secondary">
+     <div class="row">
+       <h6>Update your preference here :</h6>
+     </div>
+        <%= form_tag("/dashboard/preference_update", method: "get") do %>
+          <%Category.all.each do |x|%>
+	    <div class="row">
+	       <div class="small-1 small-offset-1 columns">
+	         <legend><%= x.name%></legend>
+		</div>
+		<div class="small-9 columns">
+	          <%= radio_button_tag(x.name, "like",  current_user.likes.include?(x.name)) %>
+	          <%= label_tag(x.name,"Like") %>
+	          <%= radio_button_tag(x.name, "dislike", current_user.dislikes.include?(x.name)) %>
+	          <%= label_tag(x.name, "Dislike") %>
+	          <%= radio_button_tag(x.name, "no_pref",  current_user.no_pref.include?(x.name), :required => "required") %>
+	          <%= label_tag(x.name, "No Pref") %>
+		</div>
+	  </div>
+	<%end%>
+          <div class="row">
+            <div class="small-1 small-offset-5 columns">		
+	    <%= submit_tag("Update") %>
+	    </div>	
+	  </div>
+      <%end%>
+   </div>
+</div>
+
 
