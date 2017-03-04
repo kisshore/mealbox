@@ -24,7 +24,7 @@ class HomeController < ApplicationController
 # It will not modify user preferences
   def randomize_meals
         Meal_Box.all.each do |box|
-         box.total_count=rand(1..2)
+         box.total_count=rand(1..5)
          box.available=box.total_count
          box.save
         end
