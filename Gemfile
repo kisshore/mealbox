@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Adding foundation gem for UI
 gem 'foundation-rails'
+# Adding devise gem for user auth
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password
