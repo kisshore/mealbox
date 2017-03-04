@@ -17,7 +17,7 @@ class HomeController < ApplicationController
        end
       user.save
      end
-     redirect_to :back
+     redirect_to "/"
 
   end
 # This action generates random count of meals & Clears the allocated meals to User
@@ -34,11 +34,12 @@ class HomeController < ApplicationController
           user.save
         end
      
-     redirect_to :back
+     redirect_to "/"
   end
   def reset
     User.update_all(:meal_of_the_day => nil, :likes => nil, :dislikes => nil, :no_pref => nil)
     Meal_Box.update_all(:total_count => nil, :available => nil)
-    redirect_to :back
+
+    redirect_to "/"
   end
 end

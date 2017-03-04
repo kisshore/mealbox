@@ -8,6 +8,6 @@ class DashboardController < ApplicationController
    current_user.no_pref=params.select{|key,value| value == "no_pref"}.keys
    current_user.save
     
-   redirect_to :back
+   redirect_to dashboard_index_path
   end
 end
