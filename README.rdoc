@@ -1,28 +1,20 @@
-== README
+Internal Meal Allocation Application:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application Randomly generates meals, based on user preference it allocate meal boxes to users.
 
-Things you may want to cover:
+Key Gems used:
+  * rails (4.2.6)
+  * devise (4.2.0)
+  * pg (0.19.0)
+  * foundation-rails (6.3.0.0)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Workflow:
+ 	User does signup/Login > Updates his prefernces 
+        Randomize meals  button helps to create random count > Allocate button helps to allocate meal boxes to users
+	Reset all button will be reseting
+			- Meal Boxes count
+			- User preferences
+			- Meal Allocated to user
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Application can be access from : https://internal-mealbox.herokuapp.com
