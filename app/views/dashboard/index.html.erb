@@ -44,7 +44,7 @@
 	          <%= radio_button_tag(x.name, "dislike", current_user.dislikes.include?(x.name)) %>
 	          <%= label_tag(x.name, "Dislike") %>
 	          <%= radio_button_tag(x.name, "no_pref",  current_user.no_pref.include?(x.name), :required => "required") %>
-	          <%= label_tag(x.name, "No Pref") %>
+	          <%= label_tag(x.name, "Default") %>
 		</div>
 	  </div>
 	<%end%>
