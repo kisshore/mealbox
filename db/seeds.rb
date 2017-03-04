@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#seeding values for category    
+ category_list = ["chicken", "mutton", "fish", "prawns", "squids"]
+ category_list.each do |item|
+  Category.create(name: item)
+ end
