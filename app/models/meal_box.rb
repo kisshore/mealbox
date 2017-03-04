@@ -1,2 +1,2 @@
-class MealBox < ActiveRecord::Base
+class Meal_Box < ActiveRecord::Base
 end

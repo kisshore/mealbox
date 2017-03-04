@@ -10,3 +10,18 @@
  category_list.each do |item|
   Category.create(name: item)
  end
+#seeding mealbox list
+ mealbox_list = [
+                ["Samsui Chicken", "chicken"],
+                ["Braised Chicken and Papaya Curry","chicken"],
+                ["Cantonese Steamed Fish","fish"],
+                ["Oven Baked Dory Fish", "fish"],
+                ["Sauteed Lemongrass Prawns", "prawns"],
+                ["Prawn Balls on Fried Tang Hoon", "prawns"],
+                ["Mutton meal box", "mutton"],
+                ["Squids meal box", "squids"]
+]
+
+  mealbox_list.each do |name, type|
+    Meal_Box.create( name: name, category: type)
+  end
