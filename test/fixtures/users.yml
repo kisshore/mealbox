@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  likes: MyText
+  dislikes: MyText
+  no_pref: MyText
+  meal_of_the_day: MyString
+
+two:
+  likes: MyText
+  dislikes: MyText
+  no_pref: MyText
+  meal_of_the_day: MyString
