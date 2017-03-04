@@ -27,6 +27,16 @@
 		<th>Available boxes</th>
 	    </tr>
 	  </thead>	
+          <tbody>
+	    <%Meal_Box.all.each do |meal|%>
+	    <tr>
+	      <td><%= meal.name%></td>
+	      <td><%= meal.category%></td>
+	      <td><%= meal.total_count%></td>
+	      <td><%= meal.available%></td>
+	    </tr>
+	   <%end %>	
+	  </tbody>
 	</table>
     </div>
   </div>
