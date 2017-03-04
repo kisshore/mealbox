@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/randomize_meals' => 'home#randomize_meals'
   get '/allocate_meals'  => 'home#allocate_meals'
+  get '/reset'           => 'home#reset'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
