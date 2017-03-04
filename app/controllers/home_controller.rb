@@ -28,11 +28,7 @@ class HomeController < ApplicationController
          box.available=box.total_count
          box.save
         end
-       
-	User.all.each do |user|
-      	  user.meal_of_the_day = nil
-          user.save
-        end
+        User.update_all(:meal_of_the_day => nil)      
      
      redirect_to "/"
   end
